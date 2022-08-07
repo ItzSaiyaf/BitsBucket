@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>BitsBucket</title>
 </head>
 <body>
-    
+    <main>
+        <div class="header">
+            <h1>BitsBucket</h1>
+            <hr>
+        </div>
+        <div class="action">
+            <h3>Enter Values to perform an action</h3>
+            <input type="number" placeholder="Enter Value" class="value" id="value1">
+
+            <div class="option">
+                <label for="act">Select an operation:</label>
+                <select name="act" class="option" id="option">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+            
+            <input type="number" placeholder="Enter Value" class="value" id="value2">
+            <button id="calc" class="calc">Calculate</button>
+        </div>
+
+        <div class="results">
+            <p id="output"></p>
+        </div>
+    </main>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
