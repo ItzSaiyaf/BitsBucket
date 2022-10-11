@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,15 @@
     <link rel="stylesheet" href="styles.css">
     <title>BitsBucket</title>
 </head>
+
 <body>
     <main>
         <div class="header">
             <h1>BitsBucket</h1>
-            <hr>
         </div>
         <div class="action">
             <h3 style="font-size: 25px;">Enter Values below to perform an action</h3>
-            <input type="number" placeholder="Enter Value" class="value" id="value1">
+            <input type="number" min="0" max="1" placeholder="Enter Value" class="value" id="value1">
 
             <div class="option">
                 <label for="act">Select an operation:</label>
@@ -26,8 +27,8 @@
                     <option value="/">/</option>
                 </select>
             </div>
-            
-            <input type="number" placeholder="Enter Value" class="value" id="value2">
+
+            <input type="number" min="0" max="1" placeholder="Enter Value" class="value" id="value2">
             <div class="btns">
                 <button id="calc" class="btn">Calculate</button>
                 <button id="clr" class="btn">Clear</button>
@@ -38,6 +39,7 @@
             <p id="output"></p>
         </div>
     </main>
-<script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
