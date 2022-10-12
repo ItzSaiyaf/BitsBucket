@@ -6,48 +6,48 @@ calc.addEventListener("click", function () {
    let value1 = document.getElementById("value1").value;
    let value2 = document.getElementById("value2").value;
    const option = document.getElementById("option").value;
+   const base = document.getElementById("base").value;
 
    switch (option) {
       case '+':
-         results.innerHTML = `Results: ${addBinary(value1, value2)}`;
+         results.innerHTML = `Results: ${addNumber(value1, value2, base)}`;
          break;
       case '-':
-         results.innerHTML = `Results: ${subBinary(value1, value2)}`;
+         results.innerHTML = `Results: ${subNumber(value1, value2, base)}`;
          break;
       case '/':
-         results.innerHTML = `Results: ${divBinary(value1, value2)}`;
+         results.innerHTML = `Results: ${divNumber(value1, value2, base)}`;
          break;
       case '*':
-         results.innerHTML = `Results: ${multBinary(value1, value2)}`;
+         results.innerHTML = `Results: ${multNumber(value1, value2, base)}`;
          break;
    }
 });
 
-function addBinary(num1, num2) {
-   var binNum1 = parseInt(num1, 2);
-   var binNum2 = parseInt(num2, 2);
+function addNumber(num1, num2, base) {
+   var binNum1 = parseInt(num1, base);
+   var binNum2 = parseInt(num2, base);
    var addition = binNum1 + binNum2;
-   return addition.toString(2);
+   return addition.toString(base);
 };
 
-function subBinary(num1, num2) {
-   var binNum1 = parseInt(num1, 2);
-   var binNum2 = parseInt(num2, 2);
+function subNumber(num1, num2, base) {
+   var binNum1 = parseInt(num1, base);
+   var binNum2 = parseInt(num2, base);
    var addition = binNum1 - binNum2;
-   return addition.toString(2);
+   return addition.toString(base);
 };
 
-function divBinary(num1, num2) {
-   var binNum1 = parseInt(num1, 2);
-   var binNum2 = parseInt(num2, 2);
+function divNumber(num1, num2, base) {
+   var binNum1 = parseInt(num1, base);
+   var binNum2 = parseInt(num2, base);
    var addition = binNum1 / binNum2;
-   return addition.toString(2);
+   return addition.toString(base);
 };
 
-function multBinary(num1, num2) {
-   var binNum1 = parseInt(num1, 2);
-   var binNum2 = parseInt(num2, 2);
+function multNumber(num1, num2, base) {
+   var binNum1 = parseInt(num1, base);
+   var binNum2 = parseInt(num2, base);
    var addition = binNum1 * binNum2;
-   return addition.toString(2);
+   return addition.toString(base);
 };
-
